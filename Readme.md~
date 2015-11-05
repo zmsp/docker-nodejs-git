@@ -1,17 +1,18 @@
+# Docker Nodejs Git
+Automatically pulls, updates, installs and runs github nodejs projects.
 
-
-# Making a custom image using argument. 
+## Making a custom image using argument. 
 
 ### Customizing
 
-File is located under  `/dokcer-nodejs/Dockerfile2`
+File is located under  `/dokcer-nodejs/Docker1`
 To use this run the following cmd
 
 ```
 git clone https://github.com/zmsp/docker-nodejs.git
-cd docker-nodejs/Dockerfile2
-docker build -t docker-nodejs .
-docker run -e "GITURL=https://github.com/heroku/node-js-sample.git" docker-test
+cd docker-nodejs-git/Docker1
+docker build -t docker-nodejs-git .
+docker run -e "GITURL=https://github.com/heroku/node-js-sample.git" docker-nodejs-git
 ```
 Change GITURL to match your repository
 
@@ -33,10 +34,12 @@ Every time the container is ran:
 * If not, runs git pull, npm install, npm run
 
 
-# Shipping your project with Dockerfile/ Publishing your nodejs app with docker
+## Shipping your project with Dockerfile/ Publishing your nodejs app with docker
 ### Customizing
-Edit the Dockerfile located under `/dokcer-nodejs/Dockerfile1`
-Simply change the   `ENV GITURL` to match the github repo in the `Docerfile`
+Edit the Dockerfile located under `/dokcer-nodejs/Docker2`
+Simply change the   `ENV GITURL` to match the github repo in the `Dockerfile` and ship it with your project
+
+
 
 ### What does it do?
 When you build the image:

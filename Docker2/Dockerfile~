@@ -1,5 +1,5 @@
   FROM readytalk/nodejs
-  MAINTAINER Pragmatics zobair.career@gmail.com
+  MAINTAINER Zobair
 
   ## Change to your project repo https://username@github.com/username/repo_name.git
   ENV GITURL "https://github.com/zmsp/node-js-sample"
