@@ -14,10 +14,12 @@ cd docker-nodejs-git/Docker1
 docker build -t docker-nodejs-git .
 docker run -e "GITURL=https://github.com/heroku/node-js-sample.git" docker-nodejs-git
 ```
-Change GITURL to match your repository
+Change GITURL to match your repository. 
+eg: GITURL=https://username@github.com/username/repo_name.git
 
 Change the second github url to point to your nodejs project.
-You can change startup command by editing/appending to the last line   
+You may need to change line 14-15, 21-23 to match your project.
+
 `ENTRYPOINT "cd /app/* && npm run dev"`
 
 ### What does it do?
@@ -38,7 +40,7 @@ Every time the container is ran:
 ### Customizing
 Edit the Dockerfile located under `/dokcer-nodejs/Docker2`
 Simply change the   `ENV GITURL` to match the github repo in the `Dockerfile` and ship it with your project
-
+eg: ENV GITURL https://username@github.com/username/repo_name.git
 ### What does it do?
 When you build the image:
 

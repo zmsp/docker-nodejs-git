@@ -6,12 +6,6 @@ LOCAL=$(git rev-parse @)
 REMOTE=$(git rev-parse @{u})
 BASE=$(git merge-base @ @{u})
 
-if [ $LOCAL = $REMOTE ]; then
-    echo "Up-to-date"
-elif [ $LOCAL = $BASE ]; then
-    git pull
-fi
-
 cd /app/*
 
 if [ $(pwd) = /app ]; then
