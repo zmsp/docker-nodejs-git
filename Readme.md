@@ -1,20 +1,4 @@
-# Shipping your project with Dockerfile/ Publishing your nodejs app with docker
-### Customizing
-Edit the Dockerfile located under `/dokcer-nodejs/Dockerfile1`
-Simply change the   `ENV GITURL` to match the github repo in the `Docerfile`
 
-### What does it do?
-When you build the image:
-
-* Clones the github project
-
-Each time you start the container
-
-* The docker image will pull any new updates
-* Installs the npm dependency 
-* Starts your npm server
-
-You can customize the startup commend by editing `ENTRYPOINT`
 
 # Making a custom image using argument. 
 
@@ -47,6 +31,25 @@ Every time the container is ran:
 * Checks if your git repo is upto date
 * If upto date, runs npm start
 * If not, runs git pull, npm install, npm run
+
+
+# Shipping your project with Dockerfile/ Publishing your nodejs app with docker
+### Customizing
+Edit the Dockerfile located under `/dokcer-nodejs/Dockerfile1`
+Simply change the   `ENV GITURL` to match the github repo in the `Docerfile`
+
+### What does it do?
+When you build the image:
+
+* Clones the github project
+
+Each time you start the container
+
+* The docker image will pull any new updates
+* Installs the npm dependency 
+* Starts your npm server
+
+You can customize the startup commend by editing `ENTRYPOINT`
 
 # Additional Docker stuffs to look at
 ## [Port publishing](http://docs.docker.com/engine/reference/run/):
