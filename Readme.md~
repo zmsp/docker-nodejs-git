@@ -4,7 +4,7 @@
 
 ### Customizing
 
-File is located under  `/dokcer-nodejs/Docker1`
+File is located under  `/dokcer-nodejs/Dockerfile2`
 To use this run the following cmd
 
 ```
@@ -35,7 +35,7 @@ Every time the container is ran:
 
 # Shipping your project with Dockerfile/ Publishing your nodejs app with docker
 ### Customizing
-Edit the Dockerfile located under `/dokcer-nodejs/Docker2`
+Edit the Dockerfile located under `/dokcer-nodejs/Dockerfile1`
 Simply change the   `ENV GITURL` to match the github repo in the `Docerfile`
 
 ### What does it do?

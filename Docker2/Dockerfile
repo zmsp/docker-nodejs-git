@@ -1,7 +1,8 @@
   FROM readytalk/nodejs
-  MAINTAINER Zobair zobair.career@gmail.com
-  ADD entrypoint.sh /
-  RUN chmod 777 /entrypoint.sh
+  MAINTAINER Zobair
+
+  ## Change to your project repo https://username@github.com/username/repo_name.git
+  ENV GITURL "https://github.com/zmsp/node-js-sample"
   WORKDIR /app
-  ENTRYPOINT ["/entrypoint.sh"]
-  CMD 
+  RUN git clone $GITURL 
+  ENTRYPOINT cd /app/*/ && git pull && npm install && npm start
