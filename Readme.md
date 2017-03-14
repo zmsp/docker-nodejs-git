@@ -21,19 +21,7 @@ Change the second github url to point to your nodejs project.
 You may need to change line 14-15, 21-23 to match your project.
 
 `ENTRYPOINT "cd /app/* && npm run dev"`
-
-### What does it do?
-The first time the container is ran: 
-
-* it clones your project
-* goes to your project directory
-* runs npm install
-
-Every time the container is ran: 
-
-* Checks if your git repo is upto date
-* If upto date, runs npm start
-* If not, runs git pull, npm install, npm run
+ll, npm install, npm run
 
 
 ## Shipping your project with Dockerfile/ Publishing your nodejs app with docker
@@ -49,7 +37,7 @@ When you build the image:
 Each time you start the container
 
 * The docker image will pull any new updates
-* Installs the npm dependency 
+* Installs npm dependencies
 * Starts your npm server
 
 You can customize the startup commend by editing `ENTRYPOINT`
@@ -62,5 +50,3 @@ Check which port your app is running, then on docker run command add -p HOST_POR
 ## Exec into docker container [EXEC](http://docs.docker.com/engine/reference/commandline/exec/)
 ...
 
-Feel free to improve or send me pull request
--- Zobair
